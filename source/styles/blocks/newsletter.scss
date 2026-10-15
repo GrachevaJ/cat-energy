@@ -1,0 +1,22 @@
+.newsletter {
+  font-family: $primary-font;
+  line-height: 24px;
+}
+
+.newsletter__title {
+  font-size: 24px;
+}
+
+.newsletter__text {
+  font-size: 16px;
+}
+
+.newsletter__form-input {
+  font-family: inherit;
+
+  &::placeholder {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: $text-color;
+  }
+}

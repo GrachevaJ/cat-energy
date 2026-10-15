@@ -1,0 +1,26 @@
+.sub-products__title {
+  font-family: $primary-font;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.sub-products__item {
+  font-size: 14px;
+  line-height: 14px;
+  color: $text-color;
+}
+
+.sub-products__item-name {
+  font-family: $primary-font;
+  font-size: 16px;
+  line-height: 16px;
+  color: #222222;
+  text-transform: uppercase;
+}
+
+.sub-products__gift {
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  background-color: $bg-color;
+}

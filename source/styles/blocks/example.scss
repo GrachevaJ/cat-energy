@@ -1,0 +1,27 @@
+.example__title {
+  font-family: $primary-font;
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.example__description {
+  color: $text-color;
+}
+
+.example__item-value {
+  font-family: $primary-font;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.example__item-description {
+  font-size: 12px;
+  color: #444444;
+}
+
+.example__price {
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
