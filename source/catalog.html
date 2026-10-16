@@ -17,8 +17,11 @@
 
   <header class="main-header">
     <a class="main-header__logo" href="#">
-      <img src="#" width="33" height="38" alt="">
-      <img src="#" width="101" height="18" alt="Кэт энерджи - питание для котов">
+      <picture>
+        <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="202" height="59" type="image/svg+xml">
+        <source media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="174" height="50" type="image/svg+xml">
+        <img src="images/logo-name.svg" width="101" height="18" alt="Логотип Cat Energy">
+      </picture>
     </a>
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -173,7 +176,7 @@
           </div>
         </li>
         <li class="cards__item">
-          <div class="card">
+          <div class="card card--empty">
             <h2 class="card__title">Показать еще 100500 товаров</h2>
             <p class="card__description">На самом деле вкусов гораздо больше!</p>
             <button class="button card__button card__button--show-more" type="button">Показать все</button>
@@ -211,6 +214,9 @@
         </li>
       </ul>
       <div class="sub-products__gift">
+        <svg width="78" height="80">
+          <use href="icons/icon-gift.svg"></use>
+        </svg>
         <p class="sub-products__gift-text">Закажите все<br> и получите чехол для<br> кота в подарок!</p>
       </div>
     </section>
@@ -240,23 +246,32 @@
 
   <footer class="main-footer">
     <div class="footer-item footer-item__logo">
-      <img src="#" width="128" height="24" alt="Магазин функционального питания для котов 'Кэт энерджи'">
+      <img src="images/logo-name.svg" width="128" height="24" alt="Магазин функционального питания для котов 'Кэт энерджи'">
     </div>
     <div class="footer-item">
       <ul class="footer-item__social-list">
         <li class="footer-item__social-item">
           <a class="footer-item__social-link footer-item__social-link--vk" href="https://vk.ru">
             <span class="visually-hidden">Мы в Вконтакте</span>
+            <svg width="27" height="17">
+              <use href="images/icon-vk.svg"></use>
+            </svg>
           </a>
         </li>
         <li class="footer-item__social-item">
           <a class="footer-item__social-link footer-item__social-link--youtube" href="https://youtube.com">
             <span class="visually-hidden">Мы на YouTube</span>
+            <svg width="27" height="17">
+              <use href="images/icon-yt.svg"></use>
+            </svg>
           </a>
         </li>
         <li class="footer-item__social-item">
           <a class="footer-item__social-link footer-item__social-link--tg" href="https://t.me">
             <span class="visually-hidden">Мы в Telegram</span>
+            <svg width="27" height="17">
+              <use href="images/icon-tg.svg"></use>
+            </svg>
           </a>
         </li>
       </ul>
@@ -264,6 +279,9 @@
     <div class="footer-item footer-item__copyright">
       <a class="footer-item__copyright-link" href="https://htmlacademy.ru">
         <span class="footer-item__copyright-text">HTML Academy</span>
+        <svg width="27" height="34">
+          <use href="images/html-academy.svg"></use>
+        </svg>
       </a>
     </div>
   </footer>

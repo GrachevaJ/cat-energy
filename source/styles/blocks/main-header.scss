@@ -1,0 +1,6 @@
+.main-header__logo {
+  @media (max-width: 767px) {
+    background-image: url("../../images/logo-mobile.svg");
+    background-repeat: no-repeat;
+  }
+}

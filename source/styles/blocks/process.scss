@@ -6,4 +6,24 @@
 
 .process__item {
   color: $text-color;
+
+  &--leaf {
+    background-image: url("../../icons/icon-leaf.svg");
+    background-color: $bg-color;
+  }
+
+  &--shake {
+    background-image: url("../../icons/icon-shake.svg");
+    background-color: $bg-color;
+  }
+
+  &--eat {
+    background-image: url("../../icons/icon-eat.svg");
+    background-color: $bg-color;
+  }
+
+  &--clock {
+    background-image: url("../../icons/icon-clock.svg");
+    background-color: $bg-color;
+  }
 }

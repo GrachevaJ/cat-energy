@@ -1,3 +1,19 @@
+.process__item {
+  &--slim {
+    background-image: url("../../icons/cat-sitting.svg");
+    background-repeat: no-repeat;
+    background-size: 50px 53px;
+    background-position: left top;
+  }
+
+  &--pro {
+    background-image: url("../../icons/cat-standing.svg");
+    background-repeat: no-repeat;
+    background-size: 67px 50px;
+    background-position: left top;
+  }
+}
+
 .programms__title {
   font-family: $primary-font;
   font-size: 24px;
@@ -7,4 +23,8 @@
 
 .programms__description {
   color: $text-color;
+}
+
+.programms__button {
+  background-image: url("../../icons/icon-arrow.svg");
 }

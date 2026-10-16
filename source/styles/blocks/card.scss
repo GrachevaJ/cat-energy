@@ -1,3 +1,11 @@
+.card {
+  &--empty {
+    background-image: url("../../icons/icon-plus.svg");
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+  }
+}
+
 .card__title {
   font-family: $primary-font;
   font-size: 16px;

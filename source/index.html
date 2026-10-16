@@ -17,8 +17,11 @@
 
   <header class="main-header">
     <a class="main-header__logo" href="#">
-      <img src="#" width="33" height="38" alt="">
-      <img src="#" width="101" height="18" alt="Кэт энерджи - питание для котов">
+      <picture>
+        <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="202" height="59" type="image/svg+xml">
+        <source media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="174" height="50" type="image/svg+xml">
+        <img src="images/logo-name.svg" width="101" height="18" alt="Логотип Cat Energy">
+      </picture>
     </a>
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -54,12 +57,12 @@
     <section class="programms">
       <h2 class="visually-hidden">Варианты программ питания</h2>
       <ul class="programms__list">
-        <li class="programms__item">
+        <li class="programms__item process__item--slim">
           <h3 class="programms__title">Похудение</h3>
           <p class="programms__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
           <a class="programms__button" href="catalog.html">каталог slim</a>
         </li>
-        <li class="programms__item">
+        <li class="programms__item process__item--pro">
           <h3 class="programms__title">Набор массы</h3>
           <p class="programms__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
           <a class="programms__button" href="catalog.html">каталог pro</a>
@@ -70,16 +73,16 @@
     <section class="process">
       <h2 class="process__title">Как это работает</h2>
       <ul class="process__list">
-        <li class="process__item">Функциональное питание
+        <li class="process__item process__item--leaf">Функциональное питание
           содержит только полезные
           питательные вещества.</li>
-        <li class="process__item">Выпускается в виде порошка,
+        <li class="process__item process__item--shake">Выпускается в виде порошка,
           который нужно лишь залить
           кипятком и готово.</li>
-        <li class="process__item">Замените один-два приема
+        <li class="process__item process__item--eat">Замените один-два приема
           обычной еды на наше
           функциональное питание.</li>
-        <li class="process__item">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</li>
+        <li class="process__item process__item--clock">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</li>
       </ul>
     </section>
 
@@ -121,23 +124,32 @@
 
   <footer class="main-footer">
     <div class="footer-item footer-item__logo">
-      <img src="#" width="128" height="24" alt="Магазин функционального питания для котов 'Кэт энерджи'">
+      <img src="images/logo-name.svg" width="128" height="24" alt="Магазин функционального питания для котов 'Кэт энерджи'">
     </div>
     <div class="footer-item">
       <ul class="footer-item__social-list">
         <li class="footer-item__social-item">
           <a class="footer-item__social-link footer-item__social-link--vk" href="https://vk.ru">
             <span class="visually-hidden">Мы в Вконтакте</span>
+            <svg width="27" height="17">
+              <use href="images/icon-vk.svg"></use>
+            </svg>
           </a>
         </li>
         <li class="footer-item__social-item">
           <a class="footer-item__social-link footer-item__social-link--youtube" href="https://youtube.com">
             <span class="visually-hidden">Мы на YouTube</span>
+            <svg width="27" height="17">
+              <use href="images/icon-yt.svg"></use>
+            </svg>
           </a>
         </li>
         <li class="footer-item__social-item">
           <a class="footer-item__social-link footer-item__social-link--tg" href="https://t.me">
             <span class="visually-hidden">Мы в Telegram</span>
+            <svg width="27" height="17">
+              <use href="images/icon-tg.svg"></use>
+            </svg>
           </a>
         </li>
       </ul>
@@ -145,6 +157,9 @@
     <div class="footer-item footer-item__copyright">
       <a class="footer-item__copyright-link" href="https://htmlacademy.ru">
         <span class="footer-item__copyright-text">HTML Academy</span>
+        <svg width="27" height="34">
+          <use href="images/html-academy.svg"></use>
+        </svg>
       </a>
     </div>
   </footer>
