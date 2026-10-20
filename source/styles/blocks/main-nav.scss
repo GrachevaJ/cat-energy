@@ -4,26 +4,55 @@
   font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  display: none;
+
+  &--opened {
+    display: block;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    width: auto;
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
+
 
 .main-nav__list {
   padding: 0;
   margin: 0;
   list-style: none;
 
+
   @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
+    gap: 33px;
+  }
+
+  @media (min-width: $desktop-width) {
+    &--index {
+      color: #ffffff;
+
+      .main-nav__item--active {
+        border-bottom: 2px solid #ffffff;
+      }
+    }
   }
 }
 
-.main-nav__toggle {
-  width: 24px;
-  height: 24px;
-  border: none;
-  background-image: url("../../icons/icon-menu.svg");
+.main-nav__item {
+  flex-shrink: 0;
+  flex-grow: 0;
+  padding: 10px 0;
 
   @media (min-width: $tablet-width) {
-    display: none;
+    &--active {
+      border-bottom: 2px solid $bg-color;
+    }
   }
 }

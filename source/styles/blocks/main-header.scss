@@ -1,14 +1,41 @@
 .main-header {
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 0;
 
   @media (min-width: $tablet-width) {
-    flex-direction: row;
-    justify-content: space-between;
+    padding: 25px 0;
+    flex-wrap: nowrap;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 55px 0 29px;
   }
 }
 
 .main-header__logo-mobile {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-header__logo {
+  margin-left: 0;
+}
+
+
+.main-header__toggle {
+  width: 24px;
+  height: 24px;
+  border: none;
+  background-image: url("../../icons/icon-menu.svg");
+
+  &--close {
+    background-image: url("../../icons/icon-close.svg");
+  }
+
   @media (min-width: $tablet-width) {
     display: none;
   }

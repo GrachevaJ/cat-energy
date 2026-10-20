@@ -16,17 +16,19 @@
 <body class="page__body page__body--index">
 
   <header class="main-header">
+    <a class="main-header__logo-mobile" href="#">
+      <img src="images/logo-mobile.svg" width="33" height="38" alt="Логотип Cat Energy">
+    </a>
     <a class="main-header__logo" href="#">
       <picture>
         <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="202" height="59" type="image/svg+xml">
         <source media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="174" height="50" type="image/svg+xml">
-        <img class="main-header__logo-mobile" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип Cat Energy">
         <img src="images/logo-name.svg" width="101" height="18" alt="Логотип Cat Energy">
       </picture>
     </a>
+    <button class="main-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-      <ul class="main-nav__list">
+      <ul class="main-nav__list main-nav__list--index">
         <li class="main-nav__item main-nav__item--active">
           <a href="#">Главная</a>
         </li>
