@@ -1,10 +1,33 @@
 .hero {
   font-family: $primary-font;
-  color: #ffffff;
-  background-color: rgba($bg-color, 0.85);
+
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: $tablet-width) {
+    text-align: center;
+    color: #ffffff;
+    background-image:
+      linear-gradient(rgba($bg-color, 0.85), rgba($bg-color, 0.85)),
+      url("../../images/index-background-mobile@1x.jpg");
+    background-size: 320px 302px, auto;
+    background-repeat: no-repeat, no-repeat;
+    background-position: top, top;
+  }
+
+  @media (min-width: $desktop-width) {
+
+    height: 660px;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    background-color: transparent;
+  }
 }
 
 .hero__title {
+  font-weight: 400;
   font-size: 36px;
   line-height: 36px;
 }
@@ -13,4 +36,10 @@
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
+}
+
+.hero__button {
+  @media (max-width: $tablet-width) {
+    order: 2;
+  }
 }

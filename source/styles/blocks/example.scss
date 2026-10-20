@@ -1,3 +1,17 @@
+.example {
+  display: grid;
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.example__wrapper {
+  @media (min-width: $desktop-width) {
+    width: 436px;
+  }
+}
+
 .example__title {
   font-family: $primary-font;
   font-size: 36px;
@@ -6,6 +20,14 @@
 
 .example__description {
   color: $text-color;
+}
+
+.example__list {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .example__item-value {

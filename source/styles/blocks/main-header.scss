@@ -1,6 +1,15 @@
-.main-header__logo {
-  @media (max-width: 767px) {
-    background-image: url("../../images/logo-mobile.svg");
-    background-repeat: no-repeat;
+.main-header {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.main-header__logo-mobile {
+  @media (min-width: $tablet-width) {
+    display: none;
   }
 }

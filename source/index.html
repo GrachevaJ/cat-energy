@@ -13,31 +13,30 @@
   <script src="scripts/index.js" defer></script>
 </head>
 
-<body class="page__body">
+<body class="page__body page__body--index">
 
   <header class="main-header">
     <a class="main-header__logo" href="#">
       <picture>
         <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="202" height="59" type="image/svg+xml">
         <source media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="174" height="50" type="image/svg+xml">
+        <img class="main-header__logo-mobile" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип Cat Energy">
         <img src="images/logo-name.svg" width="101" height="18" alt="Логотип Cat Energy">
       </picture>
     </a>
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list">
-          <li class="main-nav__item main-nav__item--active">
-            <a href="#">Главная</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="#">Подбор программы</a>
-          </li>
-        </ul>
-      </div>
+      <ul class="main-nav__list">
+        <li class="main-nav__item main-nav__item--active">
+          <a href="#">Главная</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="catalog.html">Каталог продукции</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#">Подбор программы</a>
+        </li>
+      </ul>
     </nav>
   </header>
 
@@ -46,12 +45,13 @@
     <section class="hero">
       <h1 class="hero__title">Функциональное<br> питание для котов</h1>
       <p class="hero__slogan">Занялся собой? Займись котом!</p>
+      <button class="hero__button" type="button">Подобрать программу</button>
+
       <picture>
         <source width="552" height="499" type="image/png" media="(min-width: 1140px)" srcset="images/index-can-desktop@1x.png 1x, images/index-can-desktop@2x.png 2x">
         <source width="709" height="609" type="image/jpeg" media="(min-width: 768px)" srcset="images/index-can-tablet@1x.jpg 1x, images/index-can-tablet@2x.jpg 2x">
         <img src="images/index-can-mobile@1x.png" srcset="images/index-can-mobile@2x.png 2x" width="280" height="270" alt="Коробка кошачьего Cat Energy питания со вкусом курицы.">
       </picture>
-      <button class="hero__button" type="button">Подобрать программу</button>
     </section>
 
     <section class="programms">
@@ -87,30 +87,34 @@
     </section>
 
     <section class="example">
-      <h2 class="example__title">Живой пример</h2>
-      <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-      <ul class="example__list">
-        <li class="example__item">
-          <span class="example__item-value">5 КГ</span>
-          <span class="example__item-description">снижение веса</span>
-        </li>
-        <li class="example__item">
-          <span class="example__item-value">60 ДНЕЙ</span>
-          <span class="example__item-description">затрачено времени</span>
-        </li>
-      </ul>
-      <p class="example__price">Затраты на питание: 15 000 РУБ.</p>
+      <div class="example__wrapper">
+        <h2 class="example__title">Живой пример</h2>
+        <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+        <ul class="example__list">
+          <li class="example__item">
+            <span class="example__item-value">5 КГ</span>
+            <span class="example__item-description">снижение веса</span>
+          </li>
+          <li class="example__item">
+            <span class="example__item-value">60 ДНЕЙ</span>
+            <span class="example__item-description">затрачено времени</span>
+          </li>
+          <li class="example__item">
+            <p class="example__price">Затраты на питание: 15 000 РУБ.</p>
+          </li>
+        </ul>
+      </div>
       <picture>
         <img src="images/before-cat@1x.png" srcset="images/before-cat@2x.png 2x" width="280" height="256" alt="Кот до похудения">
-      </picture>
-      <picture>
         <img src="images/after-cat@1x.png" srcset="images/after-cat@2x.png 2x" width="280" height="256" alt="Кот после похудения">
       </picture>
     </section>
 
     <section class="contacts">
-      <h3 class="contacts__invite">Приглашаем<br> к сотрудничеству<br> дилеров!</h3>
-      <address class="contacts__address">ул. Большая<br> Конюшенная, д. 19/8<br> Санкт-Петербург</address>
+      <div class="contacts__wrapper">
+        <h3 class="contacts__invite">Приглашаем<br> к сотрудничеству<br> дилеров!</h3>
+        <address class="contacts__address">ул. Большая<br> Конюшенная, д. 19/8<br> Санкт-Петербург</address>
+      </div>
       <div class="contacts__map">
         <picture>
           <source width="1140" height="400" type="image/jpeg" media="(min-width: 1440px)" srcset="images/map-desktop@1x.jpg 1x, images/map-desktop@2x.jpg 2x">

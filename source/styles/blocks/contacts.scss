@@ -1,3 +1,12 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts__wrapper {
+  display: flex;
+}
+
 .contacts__invite {
   font-family: $primary-font;
   font-size: 16px;

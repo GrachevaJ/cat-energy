@@ -1,4 +1,3 @@
-
 .main-nav {
   font-family: $primary-font;
   color: #000000;
@@ -7,9 +6,24 @@
   text-transform: uppercase;
 }
 
+.main-nav__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
 .main-nav__toggle {
   width: 24px;
   height: 24px;
   border: none;
   background-image: url("../../icons/icon-menu.svg");
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
