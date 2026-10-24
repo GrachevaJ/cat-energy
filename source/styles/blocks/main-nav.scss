@@ -25,11 +25,11 @@
 
 .main-nav__list {
   position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
   background-color: #ffffff;
-  padding: 0;
+  padding: 10px 0;
   margin: 0;
   list-style: none;
 
@@ -37,6 +37,7 @@
     position: relative;
     top: auto;
     left: auto;
+    transform: none;
     width: 100%;
     background-color: transparent;
     display: flex;
@@ -46,9 +47,13 @@
   }
 
   @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 20px;
+
     &--index {
       color: #ffffff;
 
+      /* stylelint-disable-next-line max-nesting-depth */
       .main-nav__item--active {
         border-bottom: 2px solid #ffffff;
       }
@@ -57,11 +62,15 @@
 }
 
 .main-nav__item {
-  flex-shrink: 0;
-  flex-grow: 0;
-  padding: 23px 0;
+  @media (max-width: 767px) {
+    flex-shrink: 0;
+    flex-grow: 0;
+    padding: 22px 0 24px;
+  }
 
   @media (min-width: $tablet-width) {
+    padding: 8px 0;
+
     &--active {
       border-bottom: 2px solid $bg-color;
     }

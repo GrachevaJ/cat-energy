@@ -2,6 +2,18 @@
   margin: 0;
   padding: 0 20px;
 
+  @media (max-width: 767px) {
+    &--index {
+      background-image:
+        linear-gradient(rgba($bg-color, 0.85), rgba($bg-color, 0.85)),
+        url("../../images/index-background-mobile@1x.webp");
+      background-size: 320px 302px, 320px 302px;
+      background-repeat: no-repeat, no-repeat;
+      background-position: center 65px, center 65px;
+      background-clip: padding-box;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     padding: 0 30px;
   }
