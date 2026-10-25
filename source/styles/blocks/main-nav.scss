@@ -11,6 +11,7 @@
 
   &--opened {
     display: block;
+    z-index: 2;
   }
 
   @media (min-width: $tablet-width) {
@@ -19,6 +20,7 @@
     flex-grow: 1;
     font-size: 18px;
     line-height: 24px;
+    margin-right: 4px;
   }
 }
 
@@ -34,6 +36,7 @@
   list-style: none;
 
   @media (min-width: $tablet-width) {
+    padding: 0;
     position: relative;
     top: auto;
     left: auto;

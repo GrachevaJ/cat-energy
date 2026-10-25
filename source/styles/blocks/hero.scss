@@ -1,29 +1,31 @@
 .hero {
   font-family: $primary-font;
-
+  position: relative;
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
 
   @media (max-width: 767px) {
     text-align: center;
     color: #ffffff;
   }
 
-  @media (min-width: $desktop-width) {
-
-    height: 660px;
-    flex-wrap: wrap;
-  }
-
   @media (min-width: $tablet-width) {
     background-color: transparent;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+
+    margin-bottom: 305px;
+    flex-wrap: wrap;
   }
 }
 
 .hero img {
   @media (min-width: $desktop-width) {
     position: absolute;
-    top: 143px;
+    top: 0;
     left: 50%;
     transform: translate(-30%);
   }
@@ -71,11 +73,34 @@
 }
 
 .hero__button {
-  @media (max-width: $tablet-width) {
+  width: 100%;
+  font-family: inherit;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 10px 0;
+  border: none;
+  background-color: $bg-color;
+  color: #ffffff;
+  order: 2;
+
+  @media (min-width: $tablet-width) {
     order: 2;
+    font-size: 20px;
+    line-height: 26px;
+    margin-left: 90px;
+    padding: 14px 26px;
+    width: 242px;
+    position: absolute;
+    top: 31.5%;
   }
 
   @media (min-width: $desktop-width) {
-    width: 192px;
+    font-size: 20px;
+    line-height: 26px;
+    margin-left: 80px;
+    padding: 14px 26px;
+    width: 244px;
+    top: 100%;
   }
 }

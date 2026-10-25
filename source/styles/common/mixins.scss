@@ -1,3 +1,5 @@
+@use "sass:list";
+
 @mixin font-face($font-family, $font-src) {
   @font-face {
     font-family: $font-family;
@@ -5,5 +7,35 @@
     font-style: normal;
     font-display: swap;
     src: $font-src;
+  }
+}
+
+@mixin modifier-icon($icon-name) {
+  background-image: url("../../icons/icon-#{$icon-name}.svg"), linear-gradient($bg-color, $bg-color);
+  background-size: 30px 32px, 60px 60px;
+  background-repeat: no-repeat;
+  background-position: 15px, left;
+
+  @media (min-width: $tablet-width) {
+    background-size: 25px 28px, 80px 80px;
+    background-position: 27px 57px, left 30px;
+  }
+}
+
+@mixin cat-modifier($icon, $mobile, $tablet, $desktop) {
+  background-image: url("../../icons/#{$icon}.svg");
+  background-repeat: no-repeat;
+
+  background-size: list.nth($mobile, 1) list.nth($mobile, 2);
+  background-position: list.nth($mobile, 3) list.nth($mobile, 4);
+
+  @media (min-width: $tablet-width) {
+    background-size: list.nth($tablet, 1) list.nth($tablet, 2);
+    background-position: list.nth($tablet, 3) list.nth($tablet, 4);
+  }
+
+  @media (min-width: $desktop-width) {
+    background-size: list.nth($desktop, 1) list.nth($desktop, 2);
+    background-position: list.nth($desktop, 3) list.nth($desktop, 4);
   }
 }
