@@ -1,5 +1,6 @@
 .example {
   display: grid;
+  margin-bottom: 40px;
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 1fr 1fr;
@@ -8,7 +9,7 @@
 
 .example__wrapper {
   @media (min-width: $desktop-width) {
-    width: 436px;
+    width: 434px;
   }
 }
 
@@ -19,29 +20,123 @@
   font-size: 36px;
   line-height: 40px;
   margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 60px;
+    padding-top: 5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 55px;
+    margin-bottom: 143px;
+  }
 }
 
 .example__description {
   color: $text-color;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 57px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 69px;
+  }
 }
 
 .example__list {
   display: flex;
   flex-flow: row wrap;
+  column-gap: 28px;
+  width: 100%;
   padding: 0;
   margin: 0;
   list-style: none;
+  justify-content: center;
+  margin-bottom: 7px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: start;
+    gap: 40px;
+    margin-bottom: 90px;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-content: flex-start;
+  }
+}
+
+.example__item:not(.example__item--price) {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 124px;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+  padding-top: 14px;
+  padding-bottom: 18px;
+  margin-bottom: 17px;
+
+  @media (min-width: $tablet-width) {
+    width: 162px;
+  }
+}
+
+.example__item--price {
+  @media (min-width: $tablet-width) {
+    margin-left: auto;
+    margin-top: 5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
 }
 
 .example__item-value {
   font-family: $primary-font;
   font-size: 24px;
   line-height: 24px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .example__item-description {
+  position: absolute;
+  bottom: -15px;
   font-size: 12px;
+  line-height: 1;
+  text-align: center;
   color: #444444;
+  width: 70px;
+  z-index: 2;
+
+  @media (min-width: $tablet-width) {
+    width: 142px;
+    font-size: 14px;
+    background-color: #ffffff;
+    bottom: -8px;
+  }
+
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   left: 50%;
+  //   transform: translate(-50%);
+  //   width: 87px;
+  //   height: 20px;
+  //   background-color: #ffffff;
+  //   z-index: -1;
+  // }
 }
 
 .example__price {
@@ -49,4 +144,118 @@
   font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    width: 175px;
+    text-align: right;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 350px;
+    text-align: left;
+
+    &--total {
+      margin-left: 63px;
+    }
+  }
 }
+
+.example__slider {
+  position: relative;
+  width: 280px;
+  height: 256px;
+  overflow: hidden;
+  user-select: none;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 560px;
+    height: 512px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 50px;
+    margin-left: 50px;
+  }
+}
+
+.example__slider-image img {
+  display: block;
+  width: 280px;
+  height: 256px;
+  object-fit: cover;
+
+  @media (min-width: $tablet-width) {
+    width: 560px;
+    height: 512px;
+  }
+}
+
+.example__slider-resize {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+
+  &--before {
+    left: 0;
+  }
+
+  &--after {
+    right: 0;
+  }
+}
+
+.example__slider-image--after {
+  position: absolute;
+  right: 0;
+  width: 280px;
+  height: 256px;
+
+  @media (min-width: $tablet-width) {
+    width: 560px;
+    height: 512px;
+  }
+}
+
+.example__slider-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  cursor: ew-resize;
+  opacity: 0;
+  z-index: 3;
+}
+
+.example__slider-line {
+  position: absolute;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #666666;
+  border-radius: 2px;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 2;
+  pointer-events: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background-image: url("../../icons/slider.svg");
+  }
+}
+

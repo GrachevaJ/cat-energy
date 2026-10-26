@@ -101,15 +101,25 @@
             <span class="example__item-value">60 ДНЕЙ</span>
             <span class="example__item-description">затрачено времени</span>
           </li>
-          <li class="example__item">
-            <p class="example__price">Затраты на питание: 15 000 РУБ.</p>
+          <li class="example__item example__item--price">
+            <p class="example__price">Затраты на питание: <span class="example__price--total">15 000 РУБ.</span></p>
           </li>
         </ul>
       </div>
-      <picture>
-        <img src="images/before-cat@1x.png" srcset="images/before-cat@2x.png 2x" width="280" height="256" alt="Кот до похудения">
-        <img src="images/after-cat@1x.png" srcset="images/after-cat@2x.png 2x" width="280" height="256" alt="Кот после похудения">
-      </picture>
+      <div class="example__slider">
+        <div class="example__slider-resize example__slider-resize--before">
+          <picture class="example__slider-image example__slider-image--before">
+            <img src="images/before-cat@1x.png" srcset="images/before-cat@2x.png 2x" width="280" height="256" alt="Кот до похудения">
+          </picture>
+        </div>
+        <div class="example__slider-resize example__slider-resize--after">
+          <picture class="example__slider-image example__slider-image--after">
+            <img src="images/after-cat@1x.png" srcset="images/after-cat@2x.png 2x" width="280" height="256" alt="Кот после похудения">
+          </picture>
+        </div>
+        <input class="example__slider-input" type="range" min="0" max="100" value="50">
+        <div class="example__slider-line"></div>
+      </div>
     </section>
 
     <section class="contacts">
