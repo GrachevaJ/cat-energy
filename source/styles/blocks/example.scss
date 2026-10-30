@@ -2,8 +2,13 @@
   display: grid;
   margin-bottom: 40px;
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: 70px;
+  }
+
   @media (min-width: $desktop-width) {
     grid-template-columns: 1fr 1fr;
+    margin-bottom: -10px;
   }
 }
 
