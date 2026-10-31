@@ -23,13 +23,17 @@
 
 .main-header__logo {
   margin: 0;
-}
 
+  @media (max-width: 767px) {
+    margin-left: -10px;
+  }
+}
 
 .main-header__toggle {
   width: 24px;
   height: 24px;
   border: none;
+  margin-top: -5px;
   background-image: url("../../icons/icon-menu.svg");
 
   &--close {
