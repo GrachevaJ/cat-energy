@@ -39,3 +39,47 @@
     background-position: list.nth($desktop, 3) list.nth($desktop, 4);
   }
 }
+
+@mixin side-lines($top, $left-before: null, $width-before: null, $left-after: null, $right-after: null) {
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-top: 2px solid $bg-color;
+    top: $top;
+  }
+
+  &::before {
+    @if $left-before {
+      left: $left-before;
+    }
+
+    @if $width-before {
+      width: $width-before;
+    }
+
+    @else {
+      display: none;
+    }
+  }
+
+  &::after {
+    @if $left-after {
+      left: $left-after;
+    }
+
+    @if $right-after {
+      right: $right-after;
+    }
+  }
+}
+
+@mixin gift-background($bg-image-url, $icon-size, $icon-pos) {
+  background-image:
+    url("../../icons/icon-gift.svg"),
+    linear-gradient(rgba($bg-color, 0.85), rgba($bg-color, 0.85)),
+    url($bg-image-url);
+  background-size: $icon-size, cover, cover;
+  background-position: $icon-pos, 100%, 100%;
+}

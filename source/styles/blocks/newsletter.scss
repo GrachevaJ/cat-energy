@@ -5,18 +5,89 @@
 
 .newsletter__title {
   font-size: 24px;
+  font-weight: 400;
+  position: relative;
+  margin-bottom: 32px;
+
+  @include side-lines($top: 10px, $left-after: 192px, $right-after: -20px);
+
+  @media (min-width: $tablet-width) {
+    font-size: 32px;
+    line-height: 32px;
+    padding-left: 40px;
+    margin-bottom: 65px;
+
+    @include side-lines(
+      $top: 13px,
+      $left-before: -30px, $width-before: 30px,
+      $left-after: 280px, $right-after: -30px
+    );
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 40px;
+    line-height: 40px;
+    padding-left: 0;
+    margin-bottom: 72px;
+
+    @include side-lines(
+      $top: 18px,
+      $left-before: -110px, $width-before: 70px,
+      $left-after: 293px, $right-after: -110px
+    );
+  }
 }
 
 .newsletter__text {
   font-size: 16px;
+  text-align: center;
+  margin-bottom: 24px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 32px;
+    padding: 0 68px;
+  }
+}
+
+.newsletter__form {
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 198px;
+  }
 }
 
 .newsletter__form-input {
   font-family: inherit;
+  min-width: 280px;
+  height: 56px;
+  box-sizing: border-box;
+  padding: 13px;
+  margin: 0;
+  margin-bottom: 16px;
+  border-radius: 0;
+  border: 1px solid #cdcdcd;
 
   &::placeholder {
     font-size: 20px;
     text-transform: uppercase;
     color: $text-color;
   }
+
+  @media (min-width: $tablet-width) {
+    min-width: 376px;
+    margin-left: 38px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 496px;
+  }
+}
+
+
+.newsletter__form-button {
+  width: 100%;
 }

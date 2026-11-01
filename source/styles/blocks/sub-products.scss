@@ -1,21 +1,61 @@
 .sub-products__wrapper {
   @media (min-width: $desktop-width) {
     display: flex;
+    gap: 80px;
   }
 }
 
 .sub-products__title {
   font-family: $primary-font;
+  font-weight: 400;
   font-size: 24px;
   line-height: 24px;
   padding: 0;
-  margin: 0;
+  margin-bottom: 36px;
+  position: relative;
+
+  @include side-lines($top: 10px, $left-after: 265px, $right-after: -20px);
+
+  @media (min-width: $tablet-width) {
+    font-size: 32px;
+    line-height: 32px;
+    padding: 0 40px;
+    margin-bottom: 80px;
+
+    @include side-lines(
+      $top: 13px,
+      $left-before: -30px, $width-before: 30px,
+      $left-after: 380px, $right-after: -30px
+    );
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 40px;
+    line-height: 40px;
+    padding: 0;
+
+    @include side-lines(
+      $top: 18px,
+      $left-before: -110px, $width-before: 70px,
+      $left-after: 415px, $right-after: -110px
+    );
+  }
 }
 
 .sub-products__list {
   padding: 0;
   margin: 0;
+  margin-bottom: 36px;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 896px;
+    margin-bottom: 26px;
+  }
 }
 
 .sub-products__item {
@@ -24,13 +64,25 @@
   color: $text-color;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding: 13px 0 19px;
+  border-bottom: 1px solid #cdcdcd;
+
+  &:first-child {
+    border-top: 1px solid #cdcdcd;
+  }
 
   .card__button {
     grid-column: span 2;
+    margin-top: 13px;
   }
 
   @media (min-width: $tablet-width) {
-    grid-template-columns: 2fr 1fr 1fr;
+    font-size: 16px;
+    line-height: 20px;
+    grid-template-columns: 2fr 1fr 90px;
+    border-left: 1px solid #cdcdcd;
+    border-right: 1px solid #cdcdcd;
+    padding: 26px 38px;
 
     .sub-products__item-name {
       grid-column: 1;
@@ -50,7 +102,10 @@
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: repeat(1fr, 4);
+    padding: 0;
+    border-left: none;
+    border-right: none;
+    grid-template-columns: 1.5fr 1fr 0.6fr 1.17fr;
 
     .card__button {
       grid-column: 4;
@@ -62,21 +117,89 @@
   font-family: $primary-font;
   font-size: 16px;
   line-height: 16px;
+  font-weight: 400;
   color: #222222;
   text-transform: uppercase;
   padding: 0;
   margin: 0;
+  margin-bottom: 13px;
   grid-column: span 2;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 25px 0;
+    margin: 0;
+  }
+}
+
+.sub-products__item-price {
+  margin-left: auto;
+
+  @media (min-width: $desktop-width) {
+    margin: auto;
+  }
+}
+
+.sub-products__item-weight {
+  @media (min-width: $tablet-width) {
+    text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+    margin: auto 0;
+    padding-left: 10px;
+  }
 }
 
 .sub-products__gift {
   font-size: 16px;
   line-height: 20px;
+  height: 290px;
   color: #ffffff;
-  background-image:
-    url("../../icons/icon-gift.svg"),
-    linear-gradient(rgba($bg-color, 0.85)),
-    url("../../images/catalog-background-mobile@1x.jpg");
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-size: 78px 80px, cover, cover;
+  margin-bottom: 40px;
+
+  @include gift-background("../../images/catalog-background-mobile@1x.jpg", 78px 80px, center 59px);
+
+  @media (min-width: $tablet-width) {
+    height: 200px;
+    margin-bottom: 80px;
+
+    @include gift-background("../../images/catalog-background-tablet@1x.jpg", 80px 83px, 77px 57px);
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 288px;
+    width: 245px;
+    margin-bottom: 63px;
+
+    @include gift-background("../../images/catalog-background-desktop@1x.jpg", 80px 83px, 80px 57px);
+  }
+}
+
+.sub-products__gift-text {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  padding-top: 106px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    padding-left: 421px;
+    margin-top: -15px;
+    text-align: left;
+  }
+
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    padding-top: 103px;
+    margin: 0 auto;
+    text-align: center;
+  }
 }
