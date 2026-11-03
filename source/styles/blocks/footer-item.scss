@@ -3,3 +3,33 @@
   line-height: 20px;
   color: $text-color;
 }
+
+.footer-item__logo {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.footer-item__social-link {
+  &:hover {
+    color: $bg-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.footer-item__copyright-link {
+  &:hover svg {
+    color: $bg-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

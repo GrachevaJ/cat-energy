@@ -1,7 +1,7 @@
 .main-nav {
   position: relative;
   font-family: $primary-font;
-  color: #000000;
+  color: $black;
   font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
@@ -30,7 +30,7 @@
   left: 50%;
   transform: translateX(-50%);
   width: 100vw;
-  background-color: #ffffff;
+  background-color: $white;
   padding: 10px 0;
   margin: 0;
   list-style: none;
@@ -54,11 +54,11 @@
     line-height: 20px;
 
     &--index {
-      color: #ffffff;
+      color: $white;
 
       /* stylelint-disable-next-line max-nesting-depth */
       .main-nav__item--active {
-        border-bottom: 2px solid #ffffff;
+        border-bottom: 2px solid $white;
       }
     }
   }
@@ -77,5 +77,13 @@
     &--active {
       border-bottom: 2px solid $bg-color;
     }
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

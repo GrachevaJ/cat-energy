@@ -27,6 +27,14 @@
   @media (max-width: 767px) {
     margin-left: -10px;
   }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .main-header__toggle {

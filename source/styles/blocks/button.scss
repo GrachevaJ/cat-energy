@@ -1,0 +1,10 @@
+.button {
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    background-color: #5eaa2f;
+    color: rgba($white, 0.3);
+  }
+}

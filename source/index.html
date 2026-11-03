@@ -47,7 +47,7 @@
     <section class="hero">
       <h1 class="hero__title">Функциональное<br> питание для котов</h1>
       <p class="hero__slogan">Занялся собой? Займись котом!</p>
-      <button class="hero__button" type="button">Подобрать программу</button>
+      <button class="button hero__button" type="button">Подобрать программу</button>
 
       <picture>
         <source width="552" height="499" type="image/png" media="(min-width: 1140px)" srcset="images/index-can-desktop@1x.png 1x, images/index-can-desktop@2x.png 2x">
@@ -118,7 +118,11 @@
           </picture>
         </div>
         <input class="example__slider-input" type="range" min="0" max="100" value="50">
-        <div class="example__slider-line"></div>
+        <div class="example__slider-line">
+          <svg class="example__slider-line--icon" width="40" height="40">
+            <use href="images/slider.svg"></use>
+          </svg>
+        </div>
       </div>
     </section>
 
