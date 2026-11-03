@@ -31,7 +31,7 @@
   font-family: $primary-font;
   font-size: 16px;
   line-height: 20px;
-  color: #222222;
+  color: $gray;
   text-transform: uppercase;
   padding: 0;
   margin: 0;
@@ -93,13 +93,9 @@
 
 .card__button {
   grid-column: span 3;
-  width: 100%;
   margin-top: 16px;
-  height: 40px;
-  font-family: $primary-font;
-  text-transform: uppercase;
-  font-size: 16px;
-  line-height: 20px;
+
+  @include button();
 }
 
 .card--empty {
@@ -120,6 +116,10 @@
     grid-column: span 2;
     margin: 0;
     margin-bottom: 3px;
+  }
+
+  .card__button {
+    @include button($background-color: transparent, $color: $black);
   }
 
   @media (min-width: $tablet-width) {

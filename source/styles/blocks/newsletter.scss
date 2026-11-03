@@ -53,10 +53,12 @@
 .newsletter__form {
   @media (min-width: $tablet-width) {
     display: flex;
+    margin-bottom: 12px;
   }
 
   @media (min-width: $desktop-width) {
     padding: 0 198px;
+    margin-bottom: 75px;
   }
 }
 
@@ -89,5 +91,13 @@
 
 
 .newsletter__form-button {
-  width: 100%;
+  @include button(
+    $width: 100%,
+    $font-size: 20px,
+    $line-height: 26px,
+    $padding: 15px 0
+  );
+
+  margin-bottom: 40px;
+  margin-right: 38px;
 }

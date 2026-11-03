@@ -73,34 +73,23 @@
 }
 
 .hero__button {
-  width: 100%;
-  font-family: inherit;
-  text-transform: uppercase;
-  font-size: 16px;
-  line-height: 20px;
-  padding: 10px 0;
-  border: none;
-  background-color: $bg-color;
-  color: #ffffff;
-  order: 2;
+  @include button();
 
   @media (min-width: $tablet-width) {
-    order: 2;
-    font-size: 20px;
-    line-height: 26px;
+    @include button(
+      $width: 243px,
+      $font-size: 20px,
+      $line-height: 26px,
+      $padding: 14px 26px
+    );
+
     margin-left: 90px;
-    padding: 14px 26px;
-    width: 242px;
     position: absolute;
     top: 31.5%;
   }
 
   @media (min-width: $desktop-width) {
-    font-size: 20px;
-    line-height: 26px;
     margin-left: 80px;
-    padding: 14px 26px;
-    width: 244px;
     top: 100%;
   }
 }

@@ -40,6 +40,19 @@
   }
 }
 
+@mixin button($width: 100%, $font-size: 16px, $line-height: 20px, $padding: 10px 0, $background-color: $bg-color, $color: $white ) {
+  width: $width;
+  font-family: $primary-font;
+  text-transform: uppercase;
+  font-size: $font-size;
+  line-height: $line-height;
+  padding: $padding;
+  border: none;
+  background-color: $background-color;
+  color: $color;
+  order: 2;
+}
+
 @mixin side-lines($top, $left-before: null, $width-before: null, $left-after: null, $right-after: null) {
   &::before,
   &::after {
