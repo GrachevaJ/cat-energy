@@ -21,6 +21,24 @@
   padding: 21px 33px 18px 20px;
   margin-bottom: 22px;
 
+  &--slim {
+    @include cat-modifier(
+      "cat-sitting",
+      (50px, 53px, 9%, 10%),
+      (200px, 211px, 88%, 53%),
+      (100px, 106px, 10%, 19%)
+    );
+  }
+
+  &--pro {
+    @include cat-modifier(
+      "cat-standing",
+      (67px, 50px, 6%, 12%),
+      (268px, 200px, 94%, 54%),
+      (134px, 100px, 8%, 20%)
+    );
+  }
+
   @media (min-width: $tablet-width) {
     padding: 74px 53px 53px;
     margin-bottom: 39px;
@@ -39,25 +57,6 @@
   padding-right: 55px;
 }
 
-.process__item {
-  &--slim {
-    @include cat-modifier(
-      "cat-sitting",
-      (50px, 53px, 9%, 10%),
-      (200px, 211px, 88%, 53%),
-      (100px, 106px, 10%, 19%)
-    );
-  }
-
-  &--pro {
-    @include cat-modifier(
-      "cat-standing",
-      (67px, 50px, 6%, 12%),
-      (268px, 200px, 94%, 54%),
-      (134px, 100px, 8%, 20%)
-    );
-  }
-}
 
 .programms__title {
   font-family: $primary-font;

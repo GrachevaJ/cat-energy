@@ -4,7 +4,7 @@
   color: $text-color;
 }
 
-.footer-item__logo {
+.footer-logo {
   &:hover {
     opacity: 0.8;
   }
@@ -13,6 +13,29 @@
     opacity: 0.6;
   }
 }
+
+.footer-item__social-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  gap: 24px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 35px;
+  }
+}
+
+.footer-item__copyright-link {
+  display: flex;
+  align-items: center;
+  gap: 140px;
+
+  @media (min-width: $tablet-width) {
+    gap: 23px;
+  }
+}
+
 
 .footer-item__social-link {
   &:hover {
@@ -24,7 +47,7 @@
   }
 }
 
-.footer-item__copyright-link {
+.footer-copyright-link {
   &:hover svg {
     color: $bg-color;
   }

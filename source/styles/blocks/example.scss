@@ -182,14 +182,14 @@
       background-color: $bg-color;
     }
 
-    .example__slider-line--icon {
+    .example__slider-icon {
       color: $bg-color;
     }
   }
 
   &:active {
     .example__slider-line,
-    .example__slider-line--icon {
+    .example__slider-icon {
       opacity: 0.6;
     }
   }
@@ -257,12 +257,12 @@
   left: 50%;
   transform: translate(-50%);
   z-index: 2;
+}
 
-  &--icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #666666;
-  }
+.example__slider-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #666666;
 }

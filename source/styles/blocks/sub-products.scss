@@ -71,9 +71,11 @@
     border-top: 1px solid #cdcdcd;
   }
 
-  .card__button {
+  .sub-products__button {
     grid-column: span 2;
     margin-top: 13px;
+
+    @include button();
   }
 
   @media (min-width: $tablet-width) {
@@ -96,7 +98,7 @@
       grid-column: 3;
     }
 
-    .card__button {
+    .sub-products__button {
       grid-column: span 3;
     }
   }
@@ -107,7 +109,7 @@
     border-right: none;
     grid-template-columns: 1.5fr 1fr 0.6fr 1.17fr;
 
-    .card__button {
+    .sub-products__button {
       grid-column: 4;
       margin: auto;
     }
@@ -165,13 +167,21 @@
   background-repeat: no-repeat, no-repeat, no-repeat;
   margin-bottom: 40px;
 
-  @include gift-background("../../images/catalog-background-mobile@1x.jpg", 78px 80px, center 59px);
+  @include gift-background(
+    "../../images/catalog-background-mobile@1x.webp",
+    78px 80px,
+    center 59px
+  );
 
   @media (min-width: $tablet-width) {
     height: 200px;
     margin-bottom: 80px;
 
-    @include gift-background("../../images/catalog-background-tablet@1x.jpg", 80px 83px, 77px 57px);
+    @include gift-background(
+      "../../images/catalog-background-tablet@1x.webp",
+      80px 83px,
+      77px 57px
+    );
   }
 
   @media (min-width: $desktop-width) {
@@ -179,7 +189,11 @@
     width: 245px;
     margin-bottom: 63px;
 
-    @include gift-background("../../images/catalog-background-desktop@1x.jpg", 80px 83px, 80px 57px);
+    @include gift-background(
+      "../../images/catalog-background-desktop@1x.webp",
+      80px 83px,
+      80px 57px
+    );
   }
 }
 

@@ -50,6 +50,9 @@
       <button class="button hero__button" type="button">Подобрать программу</button>
 
       <picture>
+        <source width="552" height="499" type="image/webp" media="(min-width: 1140px)" srcset="images/index-can-desktop@1x.webp 1x, images/index-can-desktop@2x.webp 2x">
+        <source width="709" height="609" type="image/webp" media="(min-width: 768px)" srcset="images/index-can-tablet@1x.webp 1x, images/index-can-tablet@2x.webp 2x">
+        <source width="280" height="270" type="image/webp" srcset="images/index-can-mobile@1x.webp 1x, images/index-can-mobile@2x.webp 2x">
         <source width="552" height="499" type="image/png" media="(min-width: 1140px)" srcset="images/index-can-desktop@1x.png 1x, images/index-can-desktop@2x.png 2x">
         <source width="709" height="609" type="image/jpeg" media="(min-width: 768px)" srcset="images/index-can-tablet@1x.jpg 1x, images/index-can-tablet@2x.jpg 2x">
         <img src="images/index-can-mobile@1x.png" srcset="images/index-can-mobile@2x.png 2x" width="280" height="270" alt="Коробка кошачьего Cat Energy питания со вкусом курицы.">
@@ -59,12 +62,12 @@
     <section class="programms">
       <h2 class="visually-hidden">Варианты программ питания</h2>
       <ul class="programms__list">
-        <li class="programms__item process__item--slim">
+        <li class="programms__item programms__item--slim">
           <h3 class="programms__title">Похудение</h3>
           <p class="programms__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
           <a class="programms__button" href="catalog.html">каталог slim</a>
         </li>
-        <li class="programms__item process__item--pro">
+        <li class="programms__item programms__item--pro">
           <h3 class="programms__title">Набор массы</h3>
           <p class="programms__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
           <a class="programms__button" href="catalog.html">каталог pro</a>
@@ -102,24 +105,26 @@
             <span class="example__item-description">затрачено времени</span>
           </li>
           <li class="example__item example__item--price">
-            <p class="example__price">Затраты на питание: <span class="example__price--total">15 000 РУБ.</span></p>
+            <p class="example__price">Затраты на питание: <span class="example__price example__price--total">15 000 РУБ.</span></p>
           </li>
         </ul>
       </div>
       <div class="example__slider">
         <div class="example__slider-resize example__slider-resize--before">
           <picture class="example__slider-image example__slider-image--before">
+            <source width="280" height="256" type="image/webp" srcset="images/before-cat@1x.webp, images/before-cat@2x.webp 2x">
             <img src="images/before-cat@1x.png" srcset="images/before-cat@2x.png 2x" width="280" height="256" alt="Кот до похудения">
           </picture>
         </div>
         <div class="example__slider-resize example__slider-resize--after">
           <picture class="example__slider-image example__slider-image--after">
+            <source width="280" height="256" type="image/webp" srcset="images/after-cat@1x.webp, images/after-cat@2x.webp 2x">
             <img src="images/after-cat@1x.png" srcset="images/after-cat@2x.png 2x" width="280" height="256" alt="Кот после похудения">
           </picture>
         </div>
-        <input class="example__slider-input" type="range" min="0" max="100" value="50">
+        <input class="example__slider-input" id="range" name="range" type="range" min="0" max="100" value="50" aria-label="range">
         <div class="example__slider-line">
-          <svg class="example__slider-line--icon" width="40" height="40">
+          <svg class="example__slider-icon" width="40" height="40">
             <use href="images/slider.svg"></use>
           </svg>
         </div>
@@ -129,10 +134,13 @@
     <section class="contacts">
       <div class="contacts__wrapper">
         <h3 class="contacts__invite">Приглашаем<br> к сотрудничеству<br> дилеров!</h3>
-        <address class="contacts__address">ул. Большая<br> Конюшенная, д. 19/8<br> <span class="contacts__address--city">Санкт-Петербург</span></address>
+        <address class="contacts__address">ул. Большая<br> Конюшенная, д. 19/8<br> <span class="contacts__address contacts__address--city">Санкт-Петербург</span></address>
       </div>
       <div class="contacts__map">
         <picture>
+          <source width="1440" height="400" type="image/webp" media="(min-width: 1440px)" srcset="images/map-desktop@1x.webp 1x, images/map-desktop@2x.webp 2x">
+          <source width="768" height="400" type="image/webp" media="(min-width: 768px)" srcset="images/map-tablet@1x.webp 1x, images/map-tablet@2x.webp 2x">
+          <source width="320" height="362" type="image/webp" srcset="images/map-mobile@1x.webp, images/map-mobile@2x.webp">
           <source width="1440" height="400" type="image/jpeg" media="(min-width: 1440px)" srcset="images/map-desktop@1x.jpg 1x, images/map-desktop@2x.jpg 2x">
           <source width="768" height="400" type="image/jpeg" media="(min-width: 768px)" srcset="images/map-tablet@1x.jpg 1x, images/map-tablet@2x.jpg 2x">
           <img src="images/map-mobile@1x.jpg" srcset="images/map-mobile@2x.jpg" width="320" height="362" alt="Метка магазина на карте">
@@ -143,7 +151,7 @@
   </main>
 
   <footer class="main-footer">
-    <div class="footer-item footer-item__logo">
+    <div class="footer-item footer-logo">
       <img src="images/logo-name.svg" width="128" height="24" alt="Магазин функционального питания для котов 'Кэт энерджи'">
     </div>
     <div class="footer-item">
