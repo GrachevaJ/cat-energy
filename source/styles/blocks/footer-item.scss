@@ -34,11 +34,8 @@
   @media (min-width: $tablet-width) {
     gap: 23px;
   }
-}
 
-
-.footer-item__social-link {
-  &:hover {
+  &:hover svg {
     color: $bg-color;
   }
 
@@ -47,8 +44,9 @@
   }
 }
 
-.footer-copyright-link {
-  &:hover svg {
+
+.footer-item__social-link {
+  &:hover {
     color: $bg-color;
   }
 
